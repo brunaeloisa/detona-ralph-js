@@ -49,7 +49,13 @@ function gameOver() {
 
 function displayStartScreen() {
   state.values.scorePoints = 0;
-  state.view.timeLeft.innerHTML = 0
+  state.values.currentTime = 0;
+  state.values.currentLives = 0;
+
+  updateTimer();
+  updateScore();
+  updateLives();
+  
   state.view.display.innerHTML = generateStartScreen();
   document.getElementById("start-button").addEventListener('click', () => {
     // armazena o modo de jogo escolhido
