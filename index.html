@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./src/images/favicon.jpg">
+  <title>Detona Ralph</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <!-- Reset -->
+  <link rel="stylesheet" href="./src/styles/reset.css">
+  
+  <!-- Style -->
+  <link rel="stylesheet" href="./src/styles/main.css">
+  <link rel="stylesheet" href="./src/styles/display.css">
+</head>
+
+<body>
+  <main>
+    <section class="menu">
+      <div class="menu-time">
+        <h2>Time Left</h2>
+        <h2 id="time-left">0</h2>
+      </div>
+      <div class="menu-score">
+        <h2>Your Score</h2>
+        <h2 id="score">0</h2>
+      </div>
+      <div class="menu-lives">
+        <img src="./src/images/player.png">
+        <h2 id="lives">x3</h2>
+      </div>
+    </section>
+
+    <section class="game-container">
+      <div id="display" class="display"></div>
+    </section>
+  </main>
+  
+  <script defer src="./src/scripts/engine.js" type="module"></script>
+</body>
+
+</html>

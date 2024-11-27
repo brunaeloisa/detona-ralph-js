@@ -1,0 +1,115 @@
+.display {
+  background-color: #000000;
+  color: #ffffff;
+  height: 450px;
+  width: 450px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* GAME SCREEN */
+
+.square {
+  background-image: linear-gradient(#ffc400 70%, #ffa500);
+  border: 1px solid #000000;
+  height: 150px;
+  width: 150px;
+}
+
+.enemy {
+  background-image: url('../images/ralph.png'), linear-gradient(#ff4a13, #ffc400 30% 70%, #ff4a13);
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+
+/* START SCREEN */
+
+.end-screen,
+.start-screen {
+  height: 100%;
+  width: 100%;
+  font-size: 1.2rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#easy, #hard {
+  display: none;
+}
+
+.start-screen label {
+  padding: 5px;
+}
+
+[name="mode"]:checked + label {
+  background-color: #d20b20;
+}
+
+#start-button {
+  border: none;
+  color: #ffffff;
+  background-color: #000000;
+  padding: 3.44rem;
+  font-size: 1rem;
+  font-weight: 200;
+  cursor: pointer;
+}
+
+h1 {
+  padding: 1.25rem;
+  margin-top: 3.75rem;
+  margin-bottom: .625rem;
+  font-size: 2.2rem;
+}
+
+/* ENDING SCREEN */
+
+p {
+  color: #ffa500;
+}
+
+#restart-button {
+  margin-top: 3.2rem;
+}
+
+#restart-button,
+#menu-button {
+  border: none;
+  background: none;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: .625rem;
+}
+
+#restart-button:hover,
+#menu-button:hover {
+  color: lightgray;
+}
+
+#menu-button {
+  margin-bottom: 2.5rem;
+}
+
+@media screen and (max-width: 450px) {
+  .display {
+    width: 100vw;
+    height: 100vw;
+  }
+
+  .square {
+    width: 33.33vw;
+    height: 33.33vw;
+  }
+
+  .end-screen, 
+  .start-screen {
+    justify-content: center;
+  }
+}
